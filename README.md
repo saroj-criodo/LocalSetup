@@ -20,17 +20,24 @@ This PowerShell script is designed to set up a local development environment by 
 
 1. Open a PowerShell terminal.
 
-2. Navigate to the directory where the script is located. 
+2. Allow running scripts 
+	```powershell
+	Set-ExecutionPolicy Unrestricted -Scope Process
+	``` 
 
 3. Run the script using the following commands:
 
 	To install packages:
 	```powershell
-	irm https://raw.githubusercontent.com/saroj-criodo/PDEs/master/install.ps1 | iex
+	irm https://raw.githubusercontent.com/saroj-criodo/LocalSetup/master/install.ps1 | iex
 	```
   
 	To uninstall
 	```powershell
-	irm https://raw.githubusercontent.com/saroj-criodo/PDEs/master/uninstall.ps1 | iex
+	irm https://raw.githubusercontent.com/saroj-criodo/LocalSetup/master/uninstall.ps1 | iex
 	```
 
+4. Once Done, block execution of scripts via
+	```powershell
+	Set-ExecutionPolicy Restricted -Scope Process
+	```
