@@ -11,11 +11,11 @@ foreach ($pkg in $devPkgs) {
 
     if ($installedPackages -ne $null) {
         Write-Host "Uninstalling $pkg..."
-        scoop uninstall $pkg
 	if ($pkg -match "vscode") {
             Write-Host "Uninstalling VS Code extension: redhat.java..."
             code --uninstall-extension redhat.java
         }
+        scoop uninstall $pkg
     } else {
         Write-Host "$pkg is not installed."
     }
