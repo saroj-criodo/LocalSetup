@@ -1,4 +1,4 @@
-# Personalized Development Environment
+# LocalSetup for Development (Windows)
 
 This PowerShell script is designed to set up a local development environment by installing and managing various development packages using Scoop. The script also ensures that Git is installed and configured. 
 
@@ -20,17 +20,17 @@ This PowerShell script is designed to set up a local development environment by 
 
 1. Open a PowerShell terminal.
 
-2. Navigate to the directory where the script is located.
+2. Navigate to the directory where the script is located. 
 
 3. Run the script using the following commands:
 
 	To install packages:
 	```powershell
-	.\localSetup.ps1 -i
+	irm https://raw.githubusercontent.com/saroj-criodo/PDEs/master/install.ps1 | iex
 	```
   
 	To uninstall
 	```powershell
-	.\localSetup.ps1 -u
+	irm https://raw.githubusercontent.com/saroj-criodo/PDEs/master/uninstall.ps1 | iex
 	```
 
