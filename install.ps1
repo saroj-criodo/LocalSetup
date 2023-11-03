@@ -9,19 +9,20 @@ Write-Host "Setting up local development environment..."
 if (!(Get-Command scoop -ErrorAction SilentlyContinue)) {
     Write-Host "Installing scoop..."
     iwr -useb get.scoop.sh | iex
-
-    # Install git if not present
-    if (!(Get-Command git -ErrorAction SilentlyContinue)) {
-    	Write-Host "Installing Git..."
-            scoop install git
-            $gitInstallPath = (scoop prefix git)
-            Invoke-Expression "$gitInstallPath\install-context.reg"
-            Invoke-Expression "$gitInstallPath\install-file-associations.reg"
-    }
-
-    scoop bucket add extras
-    scoop bucket add java
 }
+
+# Install git if not present
+if (!(Get-Command git -ErrorAction SilentlyContinue)) {
+	Write-Host "Installing Git..."
+        scoop install git
+        $gitInstallPath = (scoop prefix git)
+        Invoke-Expression "$gitInstallPath\install-context.reg"
+        Invoke-Expression "$gitInstallPath\install-file-associations.reg"
+}
+
+scoop bucket add extras
+
+scoop bucket add java
 
 scoop update
 
