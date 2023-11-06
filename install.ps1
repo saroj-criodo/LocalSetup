@@ -34,5 +34,8 @@ foreach ($pkg in $devPkgs) {
             Write-Host "Installing VS Code extension: redhat.java..."
             code --install-extension redhat.java
         }
+        if($pkg -match "python" ){
+            pip install requests
+        }
     }
 }
