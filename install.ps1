@@ -1,7 +1,7 @@
 # Install Script
 
 # Development packages
-$devPkgs = "openjdk11", "gradle", "python", "vscode"
+$devPkgs = "openjdk11", "gradle-bin", "python3", "code"
 
 Write-Host "Setting up local development environment..."
 
@@ -27,7 +27,13 @@ scoop bucket add java
 scoop update
 
 foreach ($pkg in $devPkgs) {
-    if (($pkg -match "python") -or !(Get-Command $pkg -ErrorAction SilentlyContinue)) {
+    if(($pkg -match "python3") -or !(Get-Command $pkg -ErrorAction SilentlyContinue)) {
+        if($pkg -match "python3"){
+            $pkg = "python"
+        }
+	if($pkg -match "code"){
+            $pkg = "vscode"
+        }
         Write-Host "Installing $pkg..."
         scoop install $pkg
         if ($pkg -match "vscode") {
