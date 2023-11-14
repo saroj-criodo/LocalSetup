@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Development packages
-devPkgs=("openjdk@11" "gradle@8" "python@3.11" "visual-studio-code")
+devPkgs=("openjdk@11" "gradle@8" "python@3.11")
 
 echo "Setting up local development environment..."
 
@@ -27,17 +27,7 @@ for pkg in "${devPkgs[@]}"; do
 
 	# Check if the command associated with the package is available
 	if ! command -v $pkg &>/dev/null; then
-		if [[ $pkg="visual-studio-code" ]]; then
-			# Install VS Code and extension: redhat.java
-			brew install --cask $pkg
-
-			echo "Installing VS Code extension: redhat.java..."
-			if ! code --list-extensions | grep -q "redhat.java"; then
-				code --install-extension redhat.java
-			fi
-		else
-			brew install $pkg
-		fi
+		brew install $pkg
 	else
 		echo "$pkg is already installed. Skipping..."
 	fi
@@ -53,4 +43,14 @@ if command -v python3 &>/dev/null; then
 	fi
 else
 	echo "Python is not installed. Skipping Python requests module installation..."
+fi
+
+if command -v code &>/dev/null && [[ $(uname) != "Linux" ]]; then
+	# Install VS Code and extension: redhat.java
+	brew install --cask visual-studio-code
+
+	echo "Installing VS Code extension: redhat.java..."
+	if ! code --list-extensions | grep -q "redhat.java"; then
+		code --install-extension redhat.java
+	fi
 fi

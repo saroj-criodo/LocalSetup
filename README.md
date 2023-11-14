@@ -20,10 +20,10 @@ This script is designed to set up a local development environment by installing 
 
 	To install packages:
 	```bash
-	curl https://raw.githubusercontent.com/saroj-criodo/LocalSetup/macos/install.sh | bash
+	curl -s https://raw.githubusercontent.com/saroj-criodo/LocalSetup/macos/install.sh | bash
 	```
   
 	To uninstall
 	```bash
-	curl https://raw.githubusercontent.com/saroj-criodo/LocalSetup/macos/uninstall.sh | bash
+	curl -s https://raw.githubusercontent.com/saroj-criodo/LocalSetup/macos/uninstall.sh | bash
 	```
