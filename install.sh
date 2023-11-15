@@ -45,7 +45,7 @@ else
 	echo "Python is not installed. Skipping Python requests module installation..."
 fi
 
-if command -v code &>/dev/null && [[ $(uname) != "Linux" ]]; then
+if command -v code &>/dev/null && [[ $(uname) == "Darwin" ]]; then
 	# Install VS Code and extension: redhat.java
 	brew install --cask visual-studio-code
 
