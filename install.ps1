@@ -1,7 +1,7 @@
 # Install Script
 
 # Development packages
-$devPkgs = "openjdk11", "gradle-bin", "python3", "code"
+$devPkgs = "openjdk11", "python3", "code"
 
 Write-Host "Setting up local development environment..."
 

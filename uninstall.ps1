@@ -1,7 +1,7 @@
 # Local Setup
 
 # Development packages
-$devPkgs = "openjdk11", "gradle-bin", "git", "dark", "python", "vscode"
+$devPkgs = "openjdk11", "git", "dark", "python", "vscode"
 
 Write-Host "Cleaning Up local Development Environment"
 

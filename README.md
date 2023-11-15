@@ -1,16 +1,15 @@
 # LocalSetup for Development (Windows)
 
-This PowerShell script is designed to set up a local development environment by installing and managing various development packages using Scoop. The script also ensures that Git is installed and configured. 
+This PowerShell script is designed to set up a local development environment by installing and managing various development packages using Scoop.
 
 ## Packages getting installed:
 
 1. scoop
 2. git & git-bash
 3. openjdk11
-4. gradle
-5. python
-6. vscode
-7. redhat.java #vscode extension for JAVA
+4. python
+5. vscode
+6. redhat.java #vscode extension for JAVA
 
 ## Prerequisites
 
