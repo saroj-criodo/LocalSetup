@@ -1,16 +1,15 @@
 # LocalSetup for Development (MacOS)
 
-This script is designed to set up a local development environment by installing and managing various development packages using Scoop. The script also ensures that Git is installed and configured. 
+This script is designed to set up a local development environment by installing and managing various development packages using homebrew.
 
 ## Packages getting installed:
 
-1. scoop
+1. homebrew
 2. git
 3. openjdk11
-4. gradle
-5. python
-6. vscode
-7. redhat.java #vscode extension for JAVA
+4. python
+5. vscode
+6. redhat.java #vscode extension for JAVA
 
 ## Usage
 

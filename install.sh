@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Development packages
-devPkgs=("gradle@8" "python@3.11")
+devPkgs=("openjdk@11" "python@3.11")
 
 echo "Setting up local development environment..."
 
