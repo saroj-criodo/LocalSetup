@@ -54,3 +54,5 @@ if command -v code &>/dev/null && [[ $(uname) == "Darwin" ]]; then
 		code --install-extension redhat.java
 	fi
 fi
+
+echo 'export PATH="/home/$USER/.linuxbrew/opt/openjdk@11/bin:$PATH"' >>~/.profile
